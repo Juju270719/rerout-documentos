@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://rethkalabs.com/sitemap.xml
+
