@@ -1,13 +1,13 @@
-# Site institucional â€” Rethka Labs
+# Site institucional — Rethka Labs
 
-Este diretÃ³rio contÃ©m a futura saÃ­da estÃ¡tica para o domÃ­nio raiz `rethkalabs.com`.
+Este diretório contém a futura saída estática para o domínio raiz `rethkalabs.com`.
 
-- NÃ£o possui processo de build nem dependÃªncias.
-- A pasta de publicaÃ§Ã£o esperada no Cloudflare Pages Ã© `site`.
-- As pÃ¡ginas jurÃ­dicas permanecem canÃ´nicas em `https://rerout.rethkalabs.com/` e as rotas equivalentes do domÃ­nio raiz usam redirecionamentos 302 definidos em `site/_redirects`.
-- NÃ£o hÃ¡ URL pÃºblica da Google Play configurada. O botÃ£o correspondente permanece desabilitado enquanto o aplicativo estÃ¡ em testes.
+- Não possui processo de build nem dependências.
+- A pasta de publicação esperada no Cloudflare Pages é `site`.
+- As páginas jurídicas permanecem canônicas em `https://rerout.rethkalabs.com/` e as rotas equivalentes do domínio raiz usam redirecionamentos 302 definidos em `site/_redirects`.
+- Não há URL pública da Google Play configurada. O botão correspondente permanece desabilitado enquanto o aplicativo está em testes.
 
-## PublicaÃ§Ã£o
+## Publicação
 
-Criar um projeto Cloudflare Pages ligado a este repositÃ³rio, branch `main`, sem comando de build e diretÃ³rio de saÃ­da `site`. Depois, apontar `rethkalabs.com` e `www.rethkalabs.com` para o projeto sem alterar `api.rethkalabs.com` ou `rerout.rethkalabs.com`.
+Criar um projeto Cloudflare Pages ligado a este repositório, branch `main`, sem comando de build e diretório de saída `site`. Depois, apontar `rethkalabs.com` e `www.rethkalabs.com` para o projeto sem alterar `api.rethkalabs.com` ou `rerout.rethkalabs.com`.
 
