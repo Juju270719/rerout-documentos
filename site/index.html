@@ -2,107 +2,271 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rerout: rotas mais organizadas para entregas e coletas. Importe endereços, organize paradas e encontre melhores sequências.">
-    <meta name="theme-color" content="#071426">
-    <meta property="og:title" content="Rerout — Rotas inteligentes para entregadores">
-    <meta property="og:description" content="Organize entregas e coletas, otimize suas rotas e acompanhe cada parada.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Planeje entregas e coletas com mais agilidade. Importe endereços, revise a lista e encontre melhores sequências com o Rerout.">
+    <meta name="theme-color" content="#f7faff">
+    <meta property="og:title" content="Rerout — Planeje centenas de entregas em segundos">
+    <meta property="og:description" content="Endereços organizados, rotas inteligentes e navegação integrada para quem vive a rua.">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://rethkalabs.com/">
+    <meta property="og:image" content="https://rethkalabs.com/assets/rerout-icon.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rerout — Rotas inteligentes para entregadores">
+    <meta name="twitter:description" content="Organize endereços, compare sequências e siga sua rota.">
     <link rel="canonical" href="https://rethkalabs.com/">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/rerout-icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="assets/images/route-analysis.svg" as="image" type="image/svg+xml">
     <link rel="stylesheet" href="assets/site.css">
     <script defer src="assets/site.js"></script>
-    <title>Rerout — Rotas inteligentes para entregadores</title>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rerout","applicationCategory":"BusinessApplication","operatingSystem":"Android","description":"Aplicativo para organização e otimização de rotas de entregas e coletas.","provider":{"@type":"Organization","name":"Rethka Labs","address":{"@type":"PostalAddress","addressLocality":"Curitiba","addressRegion":"PR","addressCountry":"BR"}},"url":"https://rethkalabs.com/"}</script>
+    <title>Rerout — Planeje centenas de entregas em segundos</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rerout","applicationCategory":"BusinessApplication","operatingSystem":"Android","description":"Aplicativo para importar endereços, organizar paradas e otimizar rotas de entregas e coletas.","provider":{"@type":"Organization","name":"Rethka Labs","address":{"@type":"PostalAddress","addressLocality":"Curitiba","addressRegion":"PR","addressCountry":"BR"}},"url":"https://rethkalabs.com/"}</script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <header class="site-header">
-      <nav class="nav container" aria-label="Navegação principal">
-        <a class="brand" href="#inicio" aria-label="Rerout, início"><span class="brand-mark" aria-hidden="true">R</span><span>Rerout</span></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+
+    <header class="site-header" data-header>
+      <nav class="nav shell" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" aria-label="Rerout, início">
+          <img src="assets/rerout-logo.svg" alt="Rerout" width="126" height="32">
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+          <span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"></span>
+        </button>
         <div id="menu-principal" class="nav-links">
           <a href="#como-funciona">Como funciona</a>
-          <a href="#recursos">Recursos</a>
-          <a href="#para-quem">Para quem é</a>
-          <a href="#suporte">Suporte</a>
+          <a href="#tecnologia">Funcionalidades</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="#baixar">Baixar aplicativo <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">ROTAS INTELIGENTES PARA QUEM ESTÁ NA RUA</p>
-            <h1>Mais organização. Mais entregas. Menos tempo perdido.</h1>
-            <p class="lead">O Rerout ajuda você a importar endereços, organizar as paradas e escolher sequências mais eficientes para entregas e coletas.</p>
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid shell">
+          <div class="hero-copy reveal">
+            <div class="status-pill"><span></span> Rotas mais claras. Dias mais produtivos.</div>
+            <h1 id="hero-title">Planeje centenas de entregas <em>em segundos.</em></h1>
+            <p>Importe seus endereços, deixe o Rerout organizar a lista e escolha uma sequência melhor para o seu dia.</p>
             <div class="hero-actions">
-              <button class="button button-disabled" type="button" disabled aria-describedby="play-status">Disponível em breve na Google Play</button>
-              <a class="text-link" href="#como-funciona">Ver como funciona <span aria-hidden="true">↓</span></a>
+              <button class="button button-primary" type="button" disabled aria-describedby="play-status">
+                <span class="android-mark" aria-hidden="true">◆</span> Baixar aplicativo
+              </button>
+              <a class="button button-secondary" href="#tecnologia">Ver funcionalidades <span aria-hidden="true">↓</span></a>
             </div>
-            <p id="play-status" class="availability">O aplicativo está em fase de testes na Google Play.</p>
+            <p id="play-status" class="availability">Em testes na Google Play. Lançamento em breve.</p>
+            <div class="hero-trust" aria-label="Principais características">
+              <span><i></i> Importação flexível</span><span><i></i> Revisão inteligente</span><span><i></i> Navegação integrada</span>
+            </div>
           </div>
-          <div class="hero-visual" aria-label="Tela do aplicativo Rerout analisando rotas">
-            <div class="phone-shell"><img src="assets/app-route-analysis.svg" alt="Tela do Rerout mostrando análise de rotas em andamento" width="240" height="533"></div>
-            <span class="floating-chip chip-blue">Rotas organizadas</span>
-            <span class="floating-chip chip-green">Melhor sequência</span>
+
+          <div class="hero-product reveal" data-product-stage>
+            <div class="route-orbit" aria-hidden="true">
+              <svg viewBox="0 0 760 680" role="presentation"><path class="orbit-line" d="M72 504 C146 428 154 246 282 238 S435 345 512 232 S610 90 706 122"/><circle cx="72" cy="504" r="6"/><circle cx="282" cy="238" r="6"/><circle cx="512" cy="232" r="6"/><circle cx="706" cy="122" r="6"/></svg>
+            </div>
+            <div class="device device-back" data-depth="-1">
+              <div class="device-frame">
+                <img src="assets/images/route-preview.svg" width="720" height="1600" alt="Pré-visualização de uma rota no aplicativo Rerout" loading="eager" decoding="async">
+              </div>
+            </div>
+            <div class="device device-front" data-depth="1">
+              <div class="device-frame">
+                <img src="assets/images/route-analysis.svg" width="720" height="1600" alt="Análise de rotas em andamento no aplicativo Rerout" loading="eager" decoding="async" fetchpriority="high">
+              </div>
+            </div>
+            <div class="floating-card metric-time" data-depth="2"><span>Tempo estimado</span><strong>1h 30min</strong><small>rota pronta</small></div>
+            <div class="floating-card metric-stops" data-depth="3"><span>Paradas</span><strong>91</strong><small>sequência organizada</small></div>
+            <div class="floating-card metric-status" data-depth="2"><span class="status-dot"></span><strong>Melhor rota encontrada</strong></div>
+            <div class="demo-caption" aria-live="polite"><span class="demo-index">01</span><span data-demo-copy>Validando endereços</span></div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#como-funciona" aria-label="Ir para como funciona"><span></span></a>
+      </section>
+
+      <section id="como-funciona" class="process section-dark" aria-labelledby="process-title">
+        <div class="shell">
+          <div class="section-heading centered reveal">
+            <span class="kicker">DO ARQUIVO À RUA</span>
+            <h2 id="process-title">Menos etapas. Mais caminho percorrido.</h2>
+            <p>O Rerout transforma uma lista bruta em uma sequência pronta para seguir.</p>
+          </div>
+          <div class="process-stage reveal" data-route-process>
+            <div class="process-map" aria-hidden="true">
+              <svg viewBox="0 0 1200 480" preserveAspectRatio="none">
+                <g class="street-grid"><path d="M0 92 L1200 178"/><path d="M0 338 L1200 246"/><path d="M122 0 L260 480"/><path d="M490 0 L410 480"/><path d="M720 0 L826 480"/><path d="M1040 0 L940 480"/></g>
+                <path class="route-path route-path-shadow" d="M96 362 C210 352 206 202 342 220 S486 354 578 292 S672 130 794 170 S894 320 1098 108"/>
+                <path class="route-path" d="M96 362 C210 352 206 202 342 220 S486 354 578 292 S672 130 794 170 S894 320 1098 108"/>
+                <g class="map-nodes"><circle cx="96" cy="362" r="10"/><circle cx="342" cy="220" r="10"/><circle cx="578" cy="292" r="10"/><circle cx="794" cy="170" r="10"/><circle cx="1098" cy="108" r="12"/></g>
+              </svg>
+            </div>
+            <ol class="process-steps">
+              <li class="active"><span>01</span><div><strong>Importe</strong><small>Excel, CSV, texto ou imagem</small></div></li>
+              <li><span>02</span><div><strong>Valide</strong><small>Endereços revisados e agrupados</small></div></li>
+              <li><span>03</span><div><strong>Otimize</strong><small>Sequências comparadas</small></div></li>
+              <li><span>04</span><div><strong>Siga</strong><small>Navegação pronta para iniciar</small></div></li>
+            </ol>
           </div>
         </div>
       </section>
 
-      <section id="como-funciona" class="section section-soft">
-        <div class="container">
-          <p class="eyebrow">SIMPLES DO COMEÇO AO FIM</p>
-          <h2>Da lista à rota, em poucos passos.</h2>
-          <div class="steps">
-            <article class="step-card"><span class="step-number">1</span><h3>Adicione endereços</h3><p>Importe arquivos, cole uma lista ou use a leitura de etiquetas em evolução contínua.</p></article>
-            <article class="step-card"><span class="step-number">2</span><h3>Revise e organize</h3><p>Confira paradas, agrupe registros equivalentes e ajuste informações quando necessário.</p></article>
-            <article class="step-card"><span class="step-number">3</span><h3>Escolha sua rota</h3><p>Compare opções relevantes e siga a sequência que faz mais sentido para o seu dia.</p></article>
+      <section id="tecnologia" class="editorial" aria-labelledby="technology-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <span class="kicker">TECNOLOGIA QUE TRABALHA POR VOCÊ</span>
+            <h2 id="technology-title">Tudo o que importa, no momento certo.</h2>
+          </div>
+
+          <article class="story story-analysis reveal">
+            <div class="story-copy">
+              <span class="story-number">01</span>
+              <h3>Endereços validados antes de virar quilômetros.</h3>
+              <p>O Rerout identifica inconsistências, sugere correções e mantém você no controle antes da roteirização.</p>
+              <ul><li>Correção automática quando há confiança</li><li>Revisão focada apenas no que exige atenção</li></ul>
+            </div>
+            <div class="story-visual visual-dark">
+              <div class="device editorial-device">
+                <div class="device-frame">
+                  <img src="assets/images/route-analysis.svg" width="720" height="1600" alt="Tela de análise e validação de rotas do Rerout" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="scan-line" aria-hidden="true"></div>
+              <div class="visual-note note-one"><span>✓</span> Endereços validados</div>
+              <div class="visual-note note-two"><span>↗</span> Sequências comparadas</div>
+            </div>
+          </article>
+
+          <article class="story story-preview reveal">
+            <div class="story-copy">
+              <span class="story-number">02</span>
+              <h3>Veja a rota antes de escolher o próximo passo.</h3>
+              <p>Compare distância, tempo estimado e ordem das paradas em uma pré-visualização clara.</p>
+              <ul><li>Alternativas realmente diferentes</li><li>Sequência original sempre disponível</li></ul>
+            </div>
+            <div class="story-visual visual-light">
+              <div class="device editorial-device">
+                <div class="device-frame">
+                  <img src="assets/images/route-preview.svg" width="720" height="1600" alt="Pré-visualização da rota com mapa, paradas, distância e tempo" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <div class="route-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="visual-note note-three"><strong>53,7 km</strong><span>distância estimada</span></div>
+            </div>
+          </article>
+
+          <article class="story story-navigation reveal">
+            <div class="story-copy">
+              <span class="story-number">03</span>
+              <h3>Da melhor sequência direto para a navegação.</h3>
+              <p>Abra o mapa, acompanhe cada parada e mantenha observações importantes sempre visíveis.</p>
+              <ul><li>Google Maps ou Waze</li><li>Coletas e entregas no mesmo fluxo</li></ul>
+            </div>
+            <div class="navigation-demo" aria-label="Demonstração visual da navegação integrada">
+              <div class="nav-map" aria-hidden="true">
+                <svg viewBox="0 0 760 460"><path class="nav-road" d="M-20 344 C146 322 192 410 328 310 S458 168 592 206 S686 118 790 82"/><path class="nav-road-secondary" d="M82 0 L228 480 M540 -20 L464 480 M0 154 L760 316"/><g class="nav-pins"><circle cx="80" cy="334" r="13"/><circle cx="330" cy="307" r="13"/><circle cx="590" cy="204" r="13"/><circle cx="705" cy="130" r="15"/></g></svg>
+              </div>
+              <div class="turn-card"><span class="turn-icon">↱</span><div><small>Próxima parada</small><strong>2,4 km</strong></div></div>
+              <div class="arrival-card"><span>✓</span><div><strong>Parada concluída</strong><small>Próxima rota atualizada</small></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="beneficios" class="benefits section-soft" aria-labelledby="benefits-title">
+        <div class="shell">
+          <div class="section-heading split-heading reveal">
+            <div><span class="kicker">UM APP. O DIA INTEIRO.</span><h2 id="benefits-title">Inteligência onde o trabalho acontece.</h2></div>
+            <p>Recursos conectados para reduzir o esforço entre receber uma lista e concluir a última parada.</p>
+          </div>
+          <div class="bento-grid">
+            <article class="bento-card bento-large bento-blue reveal"><span class="icon-tile">◎</span><h3>Correção automática de endereços</h3><p>Sugestões confiáveis, agrupamento inteligente e revisão somente quando necessária.</p><div class="address-flow" aria-hidden="true"><span>R. José E. Assis, 37</span><i>→</i><strong>Rua José Egídio de Assis, 37</strong></div></article>
+            <article class="bento-card bento-tall reveal"><span class="icon-tile">⌁</span><h3>Roteirização inteligente</h3><p>Alternativas comparadas por tempo, distância e sequência.</p><div class="mini-route" aria-hidden="true"><i></i><i></i><i></i><i></i><span></span></div></article>
+            <article class="bento-card reveal"><span class="icon-tile">▦</span><h3>Importação por Excel</h3><p>Colunas identificadas com mais flexibilidade.</p></article>
+            <article class="bento-card reveal"><span class="icon-tile">⌗</span><h3>Leitura por imagem <small>BETA</small></h3><p>Capture etiquetas e revise antes de importar.</p></article>
+            <article class="bento-card bento-wide reveal"><div><span class="icon-tile">↻</span><h3>Reotimização quando o dia muda</h3><p>Recalcule a sequência sem reconstruir sua lista.</p></div><div class="reoptimize-visual" aria-hidden="true"><span>Rota atual</span><i></i><strong>Nova sequência</strong></div></article>
+            <article class="bento-card reveal"><span class="icon-tile">◈</span><h3>Google Maps e Waze</h3><p>Abra sua navegação preferida com poucos toques.</p></article>
+            <article class="bento-card reveal"><span class="icon-tile">⇄</span><h3>Coletas e entregas</h3><p>Alterne o modo de operação mantendo o mesmo padrão.</p></article>
           </div>
         </div>
       </section>
 
-      <section id="recursos" class="section">
-        <div class="container feature-layout">
-          <div><p class="eyebrow">FEITO PARA A OPERAÇÃO REAL</p><h2>Uma rota mais clara, do planejamento à última parada.</h2><p class="lead compact">O Rerout transforma listas dispersas em uma rotina de entrega mais organizada.</p></div>
-          <div class="feature-grid">
-            <article class="feature-card"><span aria-hidden="true">↥</span><h3>Importe listas</h3><p>Leia arquivos e listas em diferentes formatos, sem depender de uma estrutura rígida de colunas.</p></article>
-            <article class="feature-card"><span aria-hidden="true">⌖</span><h3>Encontre endereços</h3><p>Use dados do endereço e contexto da região para tornar a localização mais confiável.</p></article>
-            <article class="feature-card"><span aria-hidden="true">↝</span><h3>Compare rotas</h3><p>Veja alternativas de sequência, distância e tempo estimado antes de iniciar.</p></article>
-            <article class="feature-card"><span aria-hidden="true">✓</span><h3>Acompanhe paradas</h3><p>Marque entregas ou coletas concluídas, puladas e com observações.</p></article>
+      <section class="comparison" aria-labelledby="comparison-title">
+        <div class="shell">
+          <div class="section-heading centered reveal"><span class="kicker">ANTES E DEPOIS</span><h2 id="comparison-title">A mesma lista. Um dia completamente diferente.</h2></div>
+          <div class="comparison-frame reveal">
+            <article class="comparison-side without">
+              <span class="comparison-label">Sem Rerout</span><h3>Planejamento que consome o seu tempo.</h3>
+              <ul><li>Endereços espalhados</li><li>Sequência decidida no improviso</li><li>Mais deslocamentos desnecessários</li></ul>
+              <div class="route-chaos" aria-hidden="true"><svg viewBox="0 0 480 230"><path d="M36 186 L146 52 L248 188 L350 50 L430 164 L112 136 L302 112 L36 186"/><g><circle cx="36" cy="186" r="8"/><circle cx="146" cy="52" r="8"/><circle cx="248" cy="188" r="8"/><circle cx="350" cy="50" r="8"/><circle cx="430" cy="164" r="8"/><circle cx="112" cy="136" r="8"/><circle cx="302" cy="112" r="8"/></g></svg></div>
+            </article>
+            <div class="comparison-transform" aria-hidden="true"><span>→</span></div>
+            <article class="comparison-side with">
+              <span class="comparison-label">Com Rerout</span><h3>Uma sequência clara para seguir em frente.</h3>
+              <ul><li>Lista revisada e organizada</li><li>Rotas relevantes comparadas</li><li>Mais previsibilidade no caminho</li></ul>
+              <div class="route-organized" aria-hidden="true"><svg viewBox="0 0 480 230"><path d="M36 178 C104 178 102 94 170 94 S236 158 300 150 S352 60 430 56"/><g><circle cx="36" cy="178" r="8"/><circle cx="170" cy="94" r="8"/><circle cx="300" cy="150" r="8"/><circle cx="430" cy="56" r="9"/></g></svg></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="para-quem" class="section section-dark">
-        <div class="container audience-grid">
-          <div><p class="eyebrow">PARA QUEM VIVE A RUA</p><h2>Para quem entrega, coleta e precisa fazer mais com o mesmo dia.</h2></div>
-          <ul class="check-list">
-            <li>Entregadores e motoristas autônomos</li>
-            <li>Operações de coleta e distribuição</li>
-            <li>Pequenos negócios com várias paradas</li>
-            <li>Equipes que precisam organizar rotas diariamente</li>
-          </ul>
+      <section class="gallery-section section-dark" aria-labelledby="gallery-title">
+        <div class="shell">
+          <div class="gallery-heading reveal"><div><span class="kicker">O PRODUTO EM MOVIMENTO</span><h2 id="gallery-title">Veja antes. Escolha melhor. Siga com confiança.</h2></div><div class="gallery-controls"><button type="button" data-gallery-prev aria-label="Tela anterior">←</button><button type="button" data-gallery-next aria-label="Próxima tela">→</button></div></div>
+          <div class="product-gallery reveal" data-gallery tabindex="0" aria-label="Galeria de telas do Rerout">
+            <article class="gallery-slide active"><div class="gallery-device"><img src="assets/images/route-analysis.svg" width="720" height="1600" alt="Analisando rotas" loading="lazy" decoding="async"></div><div><span>01</span><h3>Análise inteligente</h3><p>Endereços validados, sequências calculadas e alternativas inferiores eliminadas.</p></div></article>
+            <article class="gallery-slide"><div class="gallery-device"><img src="assets/images/route-preview.svg" width="720" height="1600" alt="Pré-visualização da rota" loading="lazy" decoding="async"></div><div><span>02</span><h3>Pré-visualização completa</h3><p>Mapa, sequência, distância e tempo em uma decisão simples.</p></div></article>
+            <article class="gallery-slide gallery-illustration"><div class="gallery-route-demo" aria-hidden="true"><svg viewBox="0 0 520 820"><path d="M-40 700 C88 664 72 520 188 516 S326 610 348 454 S334 236 470 126"/><g><circle cx="28" cy="676" r="16"/><circle cx="188" cy="516" r="16"/><circle cx="348" cy="454" r="16"/><circle cx="470" cy="126" r="18"/></g></svg><div class="gallery-nav-card"><small>Próxima parada</small><strong>2,4 km</strong><span>↱</span></div></div><div><span>03</span><h3>Navegação integrada</h3><p>Abra o mapa escolhido e acompanhe o próximo destino.</p></div></article>
+          </div>
+          <div class="gallery-dots" aria-label="Selecionar tela"><button class="active" type="button" data-gallery-dot="0" aria-label="Análise inteligente" aria-pressed="true"></button><button type="button" data-gallery-dot="1" aria-label="Pré-visualização" aria-pressed="false"></button><button type="button" data-gallery-dot="2" aria-label="Navegação integrada" aria-pressed="false"></button></div>
         </div>
       </section>
 
-      <section id="suporte" class="section">
-        <div class="container support-card">
-          <div><p class="eyebrow">PRECISA DE AJUDA?</p><h2>Conte com o suporte do Rerout.</h2><p>Veja respostas rápidas ou fale conosco sobre acesso, uso do aplicativo, assinatura ou privacidade.</p></div>
-          <div class="support-actions"><a class="button" href="https://rerout.rethkalabs.com/suporte.html">Acessar suporte</a><a class="text-link" href="mailto:suporte@rethkalabs.com">suporte@rethkalabs.com</a></div>
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="shell">
+          <div class="section-heading centered reveal"><span class="kicker">CENÁRIOS ILUSTRATIVOS</span><h2 id="testimonials-title">O tipo de diferença que o Rerout foi criado para fazer.</h2><p class="disclosure">Depoimentos abaixo são exemplos de comunicação e não representam avaliações reais de clientes.</p></div>
+          <div class="quote-grid">
+            <blockquote class="quote-card reveal"><p>“Uma lista que antes exigia conferência manual passa a ficar organizada em um único fluxo.”</p><footer>Exemplo de uso · Entregas urbanas</footer></blockquote>
+            <blockquote class="quote-card featured reveal"><p>“Quando a rota muda, poder recalcular sem recomeçar tudo faz o dia continuar andando.”</p><footer>Exemplo de uso · Motorista autônomo</footer></blockquote>
+            <blockquote class="quote-card reveal"><p>“Ver os endereços que realmente precisam de atenção torna a revisão muito mais objetiva.”</p><footer>Exemplo de uso · Operação de coletas</footer></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq section-soft" aria-labelledby="faq-title">
+        <div class="shell faq-layout">
+          <div class="section-heading reveal"><span class="kicker">PERGUNTAS FREQUENTES</span><h2 id="faq-title">Tudo claro antes de começar.</h2><p>Mais dúvidas? Acesse nosso <a href="https://rerout.rethkalabs.com/suporte.html">canal de suporte</a>.</p></div>
+          <div class="faq-list reveal">
+            <details><summary>Como adiciono meus endereços?<span></span></summary><p>Você pode importar arquivos compatíveis, colar uma lista ou usar a leitura por imagem em fase Beta.</p></details>
+            <details><summary>O Rerout funciona com Google Maps e Waze?<span></span></summary><p>Sim. Nas configurações, você escolhe o aplicativo de navegação usado para abrir cada parada.</p></details>
+            <details><summary>Posso usar coletas e entregas?<span></span></summary><p>Sim. O modo de operação pode ser alternado nas configurações do aplicativo.</p></details>
+            <details><summary>Consigo revisar endereços antes da rota?<span></span></summary><p>Sim. Itens com baixa confiança ou inconsistências são apresentados para revisão antes da confirmação.</p></details>
+            <details><summary>Como funciona a assinatura?<span></span></summary><p>A assinatura é processada pela Google Play. Consulte planos, restauração e gerenciamento diretamente no aplicativo.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section id="baixar" class="final-cta">
+        <div class="cta-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="shell cta-content reveal">
+          <span class="kicker">PRONTO PARA RODAR MELHOR?</span>
+          <h2>Sua próxima rota começa melhor.</h2>
+          <p>Organize endereços, compare sequências e leve mais clareza para o seu dia.</p>
+          <button class="button button-light" type="button" disabled>Baixar aplicativo <span aria-hidden="true">↗</span></button>
+          <small>Em testes na Google Play.</small>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">R</span><span>Rerout</span></a><p>Rotas inteligentes para entregadores.</p><p>Uma solução da Rethka Labs.</p></div>
-        <div><h2>Institucional</h2><a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a><a href="#para-quem">Para quem é</a></div>
-        <div><h2>Suporte e documentos</h2><a href="https://rerout.rethkalabs.com/suporte.html">Suporte</a><a href="https://rerout.rethkalabs.com/privacidade.html">Política de Privacidade</a><a href="https://rerout.rethkalabs.com/termos.html">Termos de Uso</a><a href="https://rerout.rethkalabs.com/exclusao-de-conta.html">Excluir conta</a></div>
+      <div class="shell footer-grid">
+        <div class="footer-brand"><img src="assets/rerout-logo.svg" alt="Rerout" width="126" height="32"><p>Rotas inteligentes para quem vive a rua.</p><span>Uma solução da Rethka Labs.</span></div>
+        <div><h2>Produto</h2><a href="#como-funciona">Como funciona</a><a href="#tecnologia">Funcionalidades</a><a href="#beneficios">Benefícios</a><a href="#faq">FAQ</a></div>
+        <div><h2>Suporte</h2><a href="https://rerout.rethkalabs.com/suporte.html">Central de ajuda</a><a href="mailto:suporte@rethkalabs.com">Falar conosco</a></div>
+        <div><h2>Documentos</h2><a href="https://rerout.rethkalabs.com/privacidade.html">Privacidade</a><a href="https://rerout.rethkalabs.com/termos.html">Termos de Uso</a><a href="https://rerout.rethkalabs.com/exclusao-de-conta.html">Excluir conta</a></div>
       </div>
-      <div class="container footer-bottom"><span>© <span data-current-year>2026</span> Rethka Labs. Todos os direitos reservados.</span><span>Curitiba/PR, Brasil</span></div>
+      <div class="shell footer-bottom"><span>© <span data-year>2026</span> Rethka Labs</span><span>Curitiba/PR, Brasil</span></div>
     </footer>
   </body>
 </html>
