@@ -1,0 +1,18 @@
+{
+  "name": "Rerout",
+  "short_name": "Rerout",
+  "description": "Rotas inteligentes para entregadores.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7faff",
+  "theme_color": "#1976f3",
+  "icons": [
+    {
+      "src": "/assets/rerout-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
