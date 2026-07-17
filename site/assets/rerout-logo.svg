@@ -1,0 +1,7 @@
+<svg width="760" height="220" viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M54 143V38H122C150 38 170 57 170 83C170 109 150 128 122 128H85L151 179" stroke="#2563EB" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="164" cy="189" r="14" fill="#2563EB"/>
+  <text x="225" y="112" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="800">Rerout</text>
+  <text x="228" y="160" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Rotas inteligentes</text>
+</svg>
+
